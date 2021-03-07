@@ -1,0 +1,53 @@
+.planetDetailContainer {
+    padding-top: 3%;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.planetDetailsWithImg {
+    font-weight: bold;
+    width: 40%;
+    text-align: center;
+}
+
+.planetDetailsWithImg img {
+    width: 80%;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.planetDetailsWithImg img:hover {
+    box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+}
+
+.planetDetails {
+    width: 40%;
+}
+
+.planetDetails div {
+    padding: 10px;
+}
+
+.residentsInfoBlock {
+    display: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+
+.selectName select {
+    background-color: wheat;
+    padding: 10px;
+    border-radius: 6px;
+    outline: none;
+}
+
+option {
+    margin: 20px;
+}

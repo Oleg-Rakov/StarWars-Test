@@ -1,25 +1,31 @@
-import logo from './logo.svg';
+import React from 'react';
+import { Route } from 'react-router';
 import './App.css';
+import CardsOfPlanets from './Components/CardsOfPlanet/CardsOfPlanet';
+import CurrentPlanet from './Components/CurrentPlanet/CurrentPlanet';
+import Header from './Components/Header/Header';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component {
+
+  state = {
+    currentPage: 0
+  }
+
+  incrementCurrentPage = () => {
+    this.setState({
+      currentPage: this.state.currentPage + 1
+    })
+  }
+
+  render() {
+    return (
+      <div className="App">
+        <Header currentPage={this.state.currentPage} />
+        <Route exact={true} path='/' render={() => <CardsOfPlanets currentPage={this.state.currentPage} incrementCurrentPage={this.incrementCurrentPage} />} />
+        <Route path='/planets/:id?' exact component={CurrentPlanet} />
+      </div>
+    );
+  }
 }
 
 export default App;
