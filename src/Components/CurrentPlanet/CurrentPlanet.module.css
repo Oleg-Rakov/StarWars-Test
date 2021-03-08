@@ -3,7 +3,6 @@
     width: 100%;
     margin: 0 auto;
     display: flex;
-    align-items: center;
     justify-content: center;
     color: white;
 }
@@ -34,20 +33,41 @@
 }
 
 .residentsInfoBlock {
-    display: none;
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    color: white;
 }
 
-
-.selectName select {
+.selectName {
     background-color: wheat;
     padding: 10px;
     border-radius: 6px;
     outline: none;
+    margin: 10px;
 }
 
-option {
-    margin: 20px;
+.selectName select {
+    appearance: none;
+    background-color: transparent !important;
+    color: black;
+    border: none;
+    padding: 0 1em 0 0;
+    margin: 0;
+    width: 100%;
+    font-family: inherit;
+    font-size: inherit;
+    cursor: inherit;
+    line-height: inherit;
+    outline: none;
+}
+
+.selectName option {
+    padding: 10px;
+    background-color: white;
+    color: green;
+}
+
+.selectName option:hover {
+    background: olive linear-gradient(olive, olive);
+    color: blue;
 }
